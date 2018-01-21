@@ -1,0 +1,22 @@
+/* slider */
+.slider{
+	background:#F2F2F2;
+}
+.slider .ads{
+	height: 360px;
+	
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.slider .ads img{
+	height: 100%;
+}
+.slider .ads1{
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.slider .ads1 img{
+	height: 100%;
+
+}
+/* hetslider */

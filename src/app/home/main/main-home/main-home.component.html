@@ -1,0 +1,85 @@
+<app-slider></app-slider>
+
+<!-- main -->
+<div class="row main">
+  <app-sidebarHome></app-sidebarHome>
+
+  <!-- phai -->
+  <div class="col-md-9 col-xs-12 phai">
+    <div class="row phai1">
+      <li>
+        <a>
+          XXAPT
+        </a>
+        <div class="daugach"></div>
+      </li>
+      <div class="col-xs-6 col-md-6 hinhphai">
+        <img src="../../../../assets/img/ads2-01-02.png" />
+      </div>
+      <div class="col-xs-6 col-md-6 hinhphai">
+        <img src="../../../../assets/img/ads2-01-02.png" />
+      </div>
+    </div>
+
+    <h3>Cac san pham dau gia</h3>
+    <div class="daugach2"></div>
+
+    <div class="spchung" *ngFor="let category of categorys">
+      <ul>
+        <li>
+          <a href="#">
+            {{category.name}}
+          </a>
+          <div class="daugach"></div>
+        </li>
+      </ul>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="sanpham">
+            <div class="row">
+              <div class="col-md-3 col-xs-12" *ngFor="let product of products">
+                <div class="video1">
+                  <img src="../../../../assets/img/sp1-01.png">
+                  <h4>{{product.proname}}</h4>
+                  <div class="play_video">
+                    <ul>
+                      <li>
+                        Người đăng: {{product.username}}
+                      </li>
+                    </ul>
+                    <input type="number" class="nhapdaugia" />
+                    <a routerLink="['danh-muc/1']"class="btn btn--primary btn--inside uppercase">Đấu giá</a>
+                    <div id="clockdiv">
+                      <div>
+                        <span class="days"></span>
+
+                      </div>
+                      <div>
+                        <span class="hours"></span>
+
+                      </div>
+                      <div>
+                        <span class="minutes"></span>
+
+                      </div>
+                      <div>
+                        <span class="seconds"></span>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="xemthem">
+                <a href="#">Xem thêm</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- het phai -->
+</div>
+<!-- het main -->
