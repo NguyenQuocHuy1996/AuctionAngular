@@ -9,6 +9,7 @@
     <link href="assets/css/header.css" rel="stylesheet">
     <link href="assets/css/slider.css" rel="stylesheet">
     <link href="assets/css/main-archive.css" rel="stylesheet">
+    <link href="assets/css/slidersp.css" rel="stylesheet">
     <link href="assets/css/footer.css" rel="stylesheet">
 
 </head>
@@ -93,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row menuan remove-margin">
+                <div class="col-md-12 menuan remove-margin">
                     <div class="col-md-6 antrenmobile">
                         <ul class="sizechu">
                             <li>
@@ -126,28 +127,45 @@
         <!-- het header -->
 
         <!-- slider -->
-        <div class="row slider">
-            <div class="col-md-4 col-xs-12 ads">
-                <img src="assets/img/ads-01.jpg" />
-            </div>
-            <div class="col-md-8 col-xs-12">
-                <div class="row ads1">
-                    <div class="col-md-6 col-xs-6">
-                        <img src="assets/img/quangcao-01.png" />
-                    </div>
-                    <div class="col-md-6 col-xs-6">
-                        <img src="assets/img/quangcao-01.png" />
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="assets/img/slidera-01.png" alt="...">
+                    <div class="carousel-caption">
+                        <div class="slider_left">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/sliderd-01.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/img/slidere-01.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="row ads1">
-                    <div class="col-md-6 col-xs-6">
-                        <img src="assets/img/quangcao-01.png" />
+                <div class="item">
+                    <img src="assets/img/sliderb-01.png" alt="...">
+                    <div class="carousel-caption">
                     </div>
-                    <div class="col-md-6 col-xs-6">
-                        <img src="assets/img/quangcao-01.png" />
+                </div>
+                <div class="item">
+                    <img src="assets/img/sliderc-01.png" alt="...">
+                    <div class="carousel-caption">
                     </div>
                 </div>
             </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+
+            </a>
         </div>
         <!-- hetslider -->
 
@@ -175,20 +193,55 @@
 
             <!-- phai -->
             <div class="col-md-9 col-xs-12 phai">
-                <div class="row phai1">
-                    <li>
-                        <a>
-                            XXAPT
-                        </a>
-                        <div class="daugach"></div>
-                    </li>
-                    <div class="col-xs-6 col-md-6 hinhphai">
-                        <img src="assets/img/ads2-01-02.png" />
+                <!-- sider sanpham -->
+                <div class="containerWrapperProva">
+                    <!-- App start -->
+                    <div class="slider_gallery_expand">
+                        <div class="controlli">
+                            <div class="back_btn"></div>
+                            <div class="next_btn"></div>
+                        </div>
+                        <div class="row muovi animationA">
+                            <div class="item">
+                                <img src="assets/img/qc6.png" alt="">
+                                <div class="wrap-text">
+                                    <h1>LOREM IPSUM</h1>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/qc2.png" alt="">
+                                <div class="wrap-text">
+                                    <h1>LOREM IPSUM</h1>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/qc3.png" alt="">
+                                <div class="wrap-text">
+                                    <h1>LOREM IPSUM</h1>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/qc4.png" alt="">
+                                <div class="wrap-text">
+                                    <h1>LOREM IPSUM</h1>
+
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="assets/img/qc2.png" alt="">
+                                <div class="wrap-text">
+                                    <h1>LOREM IPSUM</h1>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-6 col-md-6 hinhphai">
-                        <img src="assets/img/ads2-01-02.png" />
-                    </div>
+                    <!-- App end -->
                 </div>
+                <!-- hết slidersanpham -->
                 <div class="spchung">
                     <h3>Cac san pham dau gia</h3>
                     <div class="daugach2"></div>
@@ -207,110 +260,50 @@
                                             <img src="assets/img/sp1-01.png">
                                             <h4>Jordan1 xyz</h4>
                                             <div class="col-ms-12 play_video">
-                                                <h6> jordan1234</h6>
-                                                <h6> jordan123</h6>
+                                                <h6> Tên sản phẩm </h6>
+                                                <h6> Thông tin</h6>
 
                                                 <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
 
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12">
+                                    <div class="col-md-3 col-xs-12 ">
                                         <div class="video1">
                                             <img src="assets/img/sp1-01.png">
+                                            <h4>Jordan1 xyz</h4>
+                                            <div class="col-ms-12 play_video">
+                                                <h6> Tên sản phẩm </h6>
+                                                <h6> Thông tin</h6>
 
-                                            <div class="play_video">
-                                                <ul>
-                                                    <li>
-                                                        Người đăng: Michel jordan
-                                                    </li>
-                                                </ul>
-                                                <input type="number" class="nhapdaugia" />
                                                 <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
-                                                <div id="clockdiv">
-                                                    <div>
-                                                        <span class="days"></span>
 
-                                                    </div>
-                                                    <div>
-                                                        <span class="hours">12</span>
-
-                                                    </div>
-                                                    <div>
-                                                        <span class="minutes">60</span>
-
-                                                    </div>
-                                                    <div>
-                                                        <span class="seconds">12</span>
-
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12">
+                                    <div class="col-md-3 col-xs-12 ">
                                         <div class="video1">
                                             <img src="assets/img/sp1-01.png">
+                                            <h4>Jordan1 xyz</h4>
+                                            <div class="col-ms-12 play_video">
+                                                <h6> Tên sản phẩm </h6>
+                                                <h6> Thông tin</h6>
 
-                                            <div class="play_video">
-                                                <ul>
-                                                    <li>
-                                                        Người đăng: Michel jordan
-                                                    </li>
-                                                </ul>
-                                                <input type="number" class="nhapdaugia" />
                                                 <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
-                                                <div id="clockdiv">
-                                                    <div>
-                                                        <span class="days"></span>
 
-                                                    </div>
-                                                    <div>
-                                                        <span class="hours"></span>
-
-                                                    </div>
-                                                    <div>
-                                                        <span class="minutes"></span>
-
-                                                    </div>
-                                                    <div>
-                                                        <span class="seconds"></span>
-
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-3 col-xs-12">
+                                    <div class="col-md-3 col-xs-12 ">
                                         <div class="video1">
                                             <img src="assets/img/sp1-01.png">
+                                            <h4>Jordan1 xyz</h4>
+                                            <div class="col-ms-12 play_video">
+                                                <h6> Tên sản phẩm </h6>
+                                                <h6> Thông tin</h6>
 
-                                            <div class="play_video">
-                                                <ul>
-                                                    <li>
-                                                        Người đăng: Michel jordan
-                                                    </li>
-                                                </ul>
-                                                <input type="number" class="nhapdaugia" />
                                                 <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
-                                                <div id="clockdiv">
-                                                    <div>
-                                                        <span class="days"></span>
 
-                                                    </div>
-                                                    <div>
-                                                        <span class="hours"></span>
-
-                                                    </div>
-                                                    <div>
-                                                        <span class="minutes"></span>
-
-                                                    </div>
-                                                    <div>
-                                                        <span class="seconds"></span>
-
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

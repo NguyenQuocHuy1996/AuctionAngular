@@ -1,22 +1,25 @@
 /* slider */
-.slider{
-	background:#F2F2F2;
+.carousel-inner{
+	margin: 10px 0;	
 }
-.slider .ads{
-	height: 360px;
-	
-	padding-top:10px;
-	padding-bottom:10px;
+.carousel-caption .slider_left ul li{
+	margin-bottom: -15px;
+	margin-top:20px;
 }
-.slider .ads img{
-	height: 100%;
+.carousel-caption .slider_left ul li a{
+	margin:0;
+	padding:0;
 }
-.slider .ads1{
-	padding-top:10px;
-	padding-bottom:10px;
-}
-.slider .ads1 img{
-	height: 100%;
+.carousel-caption .slider_left ul img {
+width: 100%;
+text-align: center;
 
+	}
+.item active .carousel-caption{
+	color: white;
+	font-size: 14px;
+	line-height: 25px;
 }
+
+
 /* hetslider */

@@ -6,6 +6,8 @@
  }
  .spchung{
 	 background: #F6F6F7;
+	 margin-bottom: 15px;
+	 padding-bottom: 10px;
  }
 
  .col-md-4{visibility: visible;}
@@ -18,6 +20,11 @@
  .trai img{
 	 width: 5%;
  }
+ .trai h3 {
+    background: rgb(51, 51, 51);
+    padding: 3%;
+    color: white;
+}
 
  .trai{
 	 padding-top: 20px;
@@ -47,6 +54,7 @@
 	 list-style: none;
 	 list-style-image: url('../img/listyle.png');
  }
+
  /*------bangbenphai----*/
  .sanpham .xemthem{
 	 float:right;
@@ -59,10 +67,11 @@
 	margin: 10px 0;
 	background: #CCCCCC;
 }
-.phai .spchung h3{
-	color: #5A8171;
-	padding: 10px 0 10px 20px;
-	font-size: 35px;
+.phai .spchung h3 {
+    background: #333333;
+    color: #ffffff;
+    padding: 10px 0 10px 20px;
+    font-size: 35px;
 }
 .spchung .daugach2{
 	height: 6px;
@@ -90,6 +99,9 @@
  .hinhphai img{
 	 width: 100%;
 	 height: 200px;
+ }
+ .container-fluid{
+	 margin-bottom: 15px;
  }
 /* ----------sp------------------------------------ */
 .video1 h4{

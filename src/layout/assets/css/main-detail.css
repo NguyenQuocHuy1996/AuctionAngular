@@ -44,6 +44,11 @@
 	list-style: none;
 	list-style-image: url('../img/listyle.png');
 }
+.trai h3 {
+    background: rgb(51, 51, 51);
+    padding: 3%;
+    color: white;
+}
 
  /*------bangbenphai----*/
  .phai{
@@ -56,9 +61,11 @@
 	
 	padding:10px;
 }
-.phai1 h3{
-	color:#4F796B;
-	font-size: 35px;
+.phai1 h3 {
+    color: #ffffff;
+    background: #cc3939;
+    font-size: 35px;
+	padding: 1%;
 }
 .phai1 .daugach{
 	height: 3px;
