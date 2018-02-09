@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'app/service/product.service';
 import { CategoryService } from 'app/service/category.service';
+import { ProductService } from 'app/service/product.service';
 
 @Component({
   selector: 'app-main',
@@ -9,18 +9,19 @@ import { CategoryService } from 'app/service/category.service';
 })
 
 export class MainHomeComponent implements OnInit {
-  public products: any[];
   public categorys: any[];
-  constructor(private productService: ProductService, private categoryService: CategoryService) {
+  public products: any[];
+  public order: 'id';
+  constructor(private categoryService: CategoryService, private productService: ProductService) {
 
   }
 
   ngOnInit() {
       this.categoryService.getList().subscribe((response: any) => {
         this.categorys = response;
-      });
+      }, error => alert('Error: ' + error));
       this.productService.getList().subscribe((response: any) => {
           this.products = response;
-      });
+      }, error => alert('Error: ' + error));
   }
 }

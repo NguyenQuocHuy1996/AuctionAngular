@@ -12,7 +12,7 @@
               <div id="btn-click" class="hover">
                   <span class="glyphicon glyphicon-align-right"></span>
               </div>
-              <ul class="antrenmobile signinan">
+              <ul class="antrenmobile signinan" *ngIf="!check">
                   <li>
                       <a [routerLink]="['dang-nhap']">Đăng nhập</a>
                   </li>
@@ -20,13 +20,13 @@
                       <a [routerLink]="['dang-ky']">Đăng ký</a>
                   </li>
               </ul>
-              <div class="antrenmobile user">
+              <div class="antrenmobile user" *ngIf="check">
                   <ul class="bangten">
                       <li>
                           Hello!
                       </li>
                       <li>
-                          <a href="#">XXAPT</a>
+                          <a href="#">{{user}}</a>
                       </li>
                   </ul>
                   <ul class="upsp">
@@ -52,7 +52,7 @@
                   <ul>
                       <li>
                           <img src="../../../../assets/img/listyle-01.png" />
-                          <a href="#">Home</a>
+                          <a [routerLink]="['']">Home</a>
                       </li>
                       <li>
                           <img src="../../../../assets/img/listyle-01.png" />

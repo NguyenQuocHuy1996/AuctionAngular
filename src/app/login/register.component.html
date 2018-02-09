@@ -3,7 +3,7 @@
     <div id="signup">
       <h1>Sign Up</h1>
 
-      <form action="/" method="post">
+      <form #register="ngForm" (ngSubmit)="onSubmit()">
 
         <div class="top-row">
           <div class="field-wrap">
@@ -11,7 +11,7 @@
               First Name
               <span class="req">*</span>
             </label>
-            <input type="text" required autocomplete="off" />
+            <input type="text" required autocomplete="off" name="fname" [(ngModel)]="user.firstname" />
           </div>
 
           <div class="field-wrap">
@@ -19,7 +19,7 @@
               Last Name
               <span class="req">*</span>
             </label>
-            <input type="text" required autocomplete="off" />
+            <input type="text" required autocomplete="off" name="lname" [(ngModel)]="user.lastname" />
           </div>
         </div>
 
@@ -28,7 +28,7 @@
             Email Address
             <span class="req">*</span>
           </label>
-          <input type="email" required autocomplete="off" />
+          <input type="email" required autocomplete="off" name="email" [(ngModel)]="user.email"/>
         </div>
 
         <div class="field-wrap">
@@ -36,9 +36,13 @@
             Set A Password
             <span class="req">*</span>
           </label>
-          <input type="password" required autocomplete="off" />
+          <input type="password" required autocomplete="off" name="pass" [(ngModel)]="user.password"/>
         </div>
-        <div class="loginx"><a class="loginx" href="login form.html">Get started</a></div>
+
+        <div class="loginx">
+          <button class="loginx" type="submit">Get started</button>
+          <button class="loginx" type="button" (click)="goToHome()">Go Home</button>
+        </div>
       </form>
 
     </div>

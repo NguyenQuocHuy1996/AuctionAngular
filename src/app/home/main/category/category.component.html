@@ -1,7 +1,3 @@
-<!-- main -->
-<div class="row main">
-  <app-sidebarHome></app-sidebarHome>>
-
   <!-- phai -->
   <div class="col-md-9 col-xs-12 phai">
       <div class="row phai1">
@@ -31,115 +27,13 @@
               <div class="row">
                   <div class="sanpham">
                       <div class="row sp1">
-                          <div class="col-md-3 col-xs-12 ">
+                          <div class="col-md-3 col-xs-12" *ngFor="let product of products">
                               <div class="video1">
                                   <img src="../../../../assets/img/sp1-01.png">
-                                  <h4>Jordan1 xyz</h4>
+                                  <h4>{{product.proname}}</h4>
                                   <div class="col-ms-12 play_video">
-                                      <h6> jordan1234</h6>
-                                      <h6> jordan123</h6>
-
-                                      <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
-
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 col-xs-12">
-                              <div class="video1">
-                                  <img src="../../../../assets/img/sp1-01.png">
-
-                                  <div class="play_video">
-                                      <ul>
-                                          <li>
-                                              Người đăng: Michel jordan
-                                          </li>
-                                      </ul>
-                                      <input type="number" class="nhapdaugia" />
-                                      <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
-                                      <div id="clockdiv">
-                                          <div>
-                                              <span class="days"></span>
-
-                                          </div>
-                                          <div>
-                                              <span class="hours">12</span>
-
-                                          </div>
-                                          <div>
-                                              <span class="minutes">60</span>
-
-                                          </div>
-                                          <div>
-                                              <span class="seconds">12</span>
-
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 col-xs-12">
-                              <div class="video1">
-                                  <img src="../../../../assets/img/sp1-01.png">
-
-                                  <div class="play_video">
-                                      <ul>
-                                          <li>
-                                              Người đăng: Michel jordan
-                                          </li>
-                                      </ul>
-                                      <input type="number" class="nhapdaugia" />
-                                      <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
-                                      <div id="clockdiv">
-                                          <div>
-                                              <span class="days"></span>
-
-                                          </div>
-                                          <div>
-                                              <span class="hours"></span>
-
-                                          </div>
-                                          <div>
-                                              <span class="minutes"></span>
-
-                                          </div>
-                                          <div>
-                                              <span class="seconds"></span>
-
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="col-md-3 col-xs-12">
-                              <div class="video1">
-                                  <img src="../../../../assets/img/sp1-01.png">
-
-                                  <div class="play_video">
-                                      <ul>
-                                          <li>
-                                              Người đăng: Michel jordan
-                                          </li>
-                                      </ul>
-                                      <input type="number" class="nhapdaugia" />
-                                      <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
-                                      <div id="clockdiv">
-                                          <div>
-                                              <span class="days"></span>
-
-                                          </div>
-                                          <div>
-                                              <span class="hours"></span>
-
-                                          </div>
-                                          <div>
-                                              <span class="minutes"></span>
-
-                                          </div>
-                                          <div>
-                                              <span class="seconds"></span>
-
-                                          </div>
-                                      </div>
+                                      <h6>Người đăng: {{product.username}}</h6>
+                                      <a [routerLink]="['san-pham',product.catID]" class="btn btn--primary btn--inside uppercase">Đấu giá</a>
                                   </div>
                               </div>
                           </div>
@@ -154,5 +48,3 @@
       </div>
   </div>
   <!-- het phai -->
-</div>
-<!-- het main -->

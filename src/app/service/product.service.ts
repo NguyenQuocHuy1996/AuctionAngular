@@ -7,11 +7,19 @@ import 'rxjs/add/operator/map';
 export class ProductService {
     private apiURL = "http://5a572260751d4e001277964d.mockapi.io/act/product";
 
-    constructor (private _http: Http){
+    constructor (private _http: Http) {
 
     }
 
-    getList(): Observable<any[]>{
-        return this._http.get(this.apiURL).map((response:Response) => response.json())
+    getList(): Observable<any[]> {
+        return this._http.get(this.apiURL)
+          .map((response: Response) => response.json() )
+    }
+
+    getProductbyID(id: number){
+      return this._http.get(this.apiURL)
+        .map( res =>{
+          return res.json().filter((product) => product.cateID === id);
+      })
     }
 }

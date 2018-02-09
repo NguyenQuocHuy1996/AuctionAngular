@@ -2,15 +2,14 @@
   <div class="form">
     <div id="login">
       <h1>Welcome Back!</h1>
-
-      <form action="/" method="post">
+      <form #login="ngForm" (ngSubmit)="checkLogin(login.value)">
 
         <div class="field-wrap">
           <label>
             Email Address
             <span class="req">*</span>
           </label>
-          <input type="email" required autocomplete="off" />
+          <input type="email" required autocomplete="off" name="email" ngModel />
         </div>
 
         <div class="field-wrap">
@@ -18,7 +17,7 @@
             Password
             <span class="req">*</span>
           </label>
-          <input type="password" required autocomplete="off" />
+          <input type="password" required autocomplete="off" name="pass" ngModel />
         </div>
 
         <p class="forgot">
@@ -28,7 +27,20 @@
           <a href="register.html">register</a>
         </p>
 
-        <div class="loginxx"><a class="loginx" href="#">Login</a></div>
+        <button class="loginx" type="submit" >Login</button>
+        <button class="loginx" type="button" (click)="goToHome()">Go Home</button>
+
+
+      <!-- <div *ngFor="let users of user">
+        <ul>
+          <li>{{user.email}}</li>
+        </ul>
+      </div> -->
+      <div *ngFor="let user of users">
+        <ul>
+          <li style="color:yellow;">{{user.email}}</li>
+        </ul>
+      </div>
 
       </form>
 

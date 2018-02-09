@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppRoutes } from './app.routes';
@@ -14,6 +14,7 @@ import { Page404Component } from './404/page-404.componnent';
 
 import { HeaderComponent } from './home/header/header.component';
 import { SliderComponent } from './home/slider/slider.component';
+import { MainComponent } from './home/main/main.component';
 import { FooterComponent } from './home/footer/footer.component';
 
 import { MainHomeComponent } from './home/main/main-home/main-home.component';
@@ -26,22 +27,38 @@ import { SideBarHomeComponent } from './home/main/sidebar/sidebarHome.component'
 
 import { ProductService } from './service/product.service';
 import { CategoryService } from './service/category.service';
+import { LoginService } from './service/login.service';
+import { RegisterService } from './service/register.service';
+import { UserService } from './service/user.service';
+
+import { CheckLoginGuard } from './guards/checkLogin.guard';
+
+import { FormdataUploadComponent } from './home/main/uploadDemo/uploadDemo.component';
+
+//Pipe Sort
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent, LoginComponent, RegisterComponent, Page404Component,
-    HeaderComponent, SliderComponent, FooterComponent,
+    HeaderComponent, SliderComponent, MainComponent, FooterComponent,
     MainHomeComponent, DangSPComponent, CategoryComponent, SanPhamDaDangComponent, DetailComponent,
-    SideBarHomeComponent
+    SideBarHomeComponent,
+
+    FormdataUploadComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutes
+    AppRoutes,
+    ReactiveFormsModule,
+    Ng2OrderModule
   ],
-  providers: [ProductService, CategoryService],
+  providers: [LoginService, RegisterService, UserService,
+              ProductService, CategoryService,
+              CheckLoginGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

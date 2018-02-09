@@ -34,7 +34,6 @@
 }
 .trai ul{
 	list-style: none;
-	list-style-image: url('../img/listyle.png');
 }
 
 @media (max-width:768px){

@@ -2,17 +2,9 @@
 <div class="col-md-3 col-xs-4 trai">
     <h3>Danh mục</h3>
     <ul>
-        <li>
+        <li *ngFor = "let category of categorys">
             <img src="../../../../assets/img/listyle-01.png" />
-            <a href="#">Đồng hồ</a>
-        </li>
-        <li>
-            <img src="../../../../assets/img/listyle-01.png" />
-            <a href="#">Linh kiện máy tính</a>
-        </li>
-        <li>
-            <img src="../../../../assets/img/listyle-01.png" />
-            <a href="#">Điện thoại</a>
+            <a [routerLink]="['/danh-muc',category.id]">{{category.name}}</a>
         </li>
     </ul>
 </div>
