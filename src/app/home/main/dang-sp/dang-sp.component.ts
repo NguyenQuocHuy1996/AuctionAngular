@@ -3,6 +3,9 @@ import { ProductService } from './../../../service/product.service';
 import { LoginService } from './../../../service/login.service';
 import { CategoryService } from './../../../service/category.service';
 
+//CountDown Time
+
+
 @Component ({
   selector: 'app-dangSP',
   templateUrl: './dang-sp.componnent.html',
@@ -16,8 +19,8 @@ export class DangSPComponent implements OnInit {
   warrantyperiod: string;
   note: string;
   cateID: number;
+  date = new Date();
   constructor(private productService: ProductService, private loginService: LoginService, private categoryService: CategoryService) {
-
   }
 
   ngOnInit(){
@@ -28,6 +31,14 @@ export class DangSPComponent implements OnInit {
     this.categoryService.getList().subscribe((response: any) => {
       this.categorys = response;
     }, error => alert('Error: ' + error));
+
+    console.log('Năm: ' + this.date.getFullYear());
+    console.log('Tháng: ' + this.date.getMonth());
+    console.log('Ngày: ' + this.date.getDay() + 1);
+
+    console.log('Giờ: ' + this.date.getHours());
+    console.log('Phút: ' + this.date.getMinutes());
+    console.log('Giây: ' + this.date.getSeconds());
   }
 
   onProNameType(value: any){

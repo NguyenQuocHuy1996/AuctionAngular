@@ -32,17 +32,13 @@ import { LoginService } from './service/login.service';
 import { RegisterService } from './service/register.service';
 import { UserService } from './service/user.service';
 
+//Guard for Login
 import { CheckLoginGuard } from './guards/checkLogin.guard';
-
-//Form Data Upload
-import { FormdataUploadComponent } from './home/main/uploadDemo/uploadDemo.component';
+//CountDown Time
+import {CountDown} from "../../node_modules/angular2-simple-countdown/countdown";
 
 //Pipe Sort
 import { Ng2OrderModule } from 'ng2-order-pipe';
-
-//Upload File
-import { FileUpload } from './service/fileupload.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +47,7 @@ import { FileUpload } from './service/fileupload.component';
     MainHomeComponent, DangSPComponent, CategoryComponent, SanPhamDaDangComponent, SanPhamDaDauGiaComponent, DetailComponent,
     SideBarHomeComponent,
 
-    FormdataUploadComponent
+    CountDown
   ],
   imports: [
     BrowserModule,
@@ -64,9 +60,8 @@ import { FileUpload } from './service/fileupload.component';
   ],
   providers: [LoginService, RegisterService, UserService,
               ProductService, CategoryService,
-              CheckLoginGuard,
-
-              FileUpload],
+              CheckLoginGuard
+            ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,8 +16,6 @@ import { DetailComponent } from './home/main/detail/detail.component';
 
 import { CheckLoginGuard } from './guards/checkLogin.guard';
 
-import { FormdataUploadComponent } from './home/main/uploadDemo/uploadDemo.component';
-
 const routing: Routes = [
   {
     path: '', component: HomeComponent,
@@ -35,7 +33,6 @@ const routing: Routes = [
       //{ path: 'san-pham-da-dau-gia', component: SanPhamDaDauGiaComponent, canActivate: [CheckLoginGuard] },
       { path: 'san-pham-da-dau-gia', component: SanPhamDaDauGiaComponent},
       { path: 'san-pham-da-dang', component: SanPhamDaDangComponent, canActivate: [CheckLoginGuard] },
-      { path: 'demo-upload-image', component: FormdataUploadComponent },
     ]
   },
   { path: 'dang-nhap', component: LoginComponent },
