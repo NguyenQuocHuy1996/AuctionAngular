@@ -164,11 +164,21 @@
 .ttspdd .sndg ul li a:hover{	
 	color: rgb(243, 245, 139);	
 }
-.ttspdd .btn--inside {
-    margin-left: 22px;
+.ttspdd .btn--primary:hover {
+	background:rgb(150, 42, 42) ;
+	color: #F2F2F2;
+  }
+  .ttspdd .btn--primary:focus{
+	color: #F2F2F2; 
+  }
+  .ttspdd .btn--inside {
+    margin-left: 0px;
 }
 /* -----didong--------------------------------- */
  @media (max-width:768px){
+	.ttspdd .btn--inside {
+		margin-left: -80px;
+	}
 	.trai{
 		display: none;
 	}
@@ -181,6 +191,16 @@
 	}
 	.timkiem{
 		display: block;
+	}
+	.sanpham .ttspdd ul li a {
+		color: white;
+		font-size: 15px;
+	}
+	.sanpham .ttspdd .iconman img {
+		width: 100%;
+	}
+	.sndg li{
+		font-size: 15px;
 	}
 
 

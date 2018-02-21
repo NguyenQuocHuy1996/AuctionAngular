@@ -1,58 +1,39 @@
 <div class="container">
   <div class="form">
     <div id="signup">
-      <h1>Sign Up</h1>
+      <h1>Đăng ký</h1>
 
       <form #register="ngForm" (ngSubmit)="onSubmit()">
 
         <div class="top-row">
           <div class="field-wrap">
-            <label>
-              First Name
-              <span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off" name="fname" [(ngModel)]="user.firstname" />
+            <input type="text" required autocomplete="off" name="lname" [(ngModel)]="user.lastname" placeholder="Họ"/>
           </div>
 
           <div class="field-wrap">
-            <label>
-              Last Name
-              <span class="req">*</span>
-            </label>
-            <input type="text" required autocomplete="off" name="lname" [(ngModel)]="user.lastname" />
+            <input type="text" required autocomplete="off" name="fname" [(ngModel)]="user.firstname" placeholder="Tên"/>
           </div>
         </div>
 
         <div class="field-wrap">
-          <label>
-            Email Address
-            <span class="req">*</span>
-          </label>
-          <input type="email" required autocomplete="off" name="email" [(ngModel)]="user.email"/>
+          <input #email (keyup)="onEmail(email.value)" type="email" required autocomplete="off" name="email" [(ngModel)]="user.email" placeholder="Email"/>
         </div>
 
         <div class="field-wrap">
-          <label>
-            Set A Password
-            <span class="req">*</span>
-          </label>
-          <input type="password" required autocomplete="off" name="pass" [(ngModel)]="user.password"/>
+          <input #pass (keyup)="onPass(pass.value)" type="password" required autocomplete="off" name="pass" [(ngModel)]="user.password" placeholder="Mật khẩu"/>
+        </div>
+
+        <div class="field-wrap">
+          <input #repass (keyup)="onRePass(repass.value)" type="password" required autocomplete="off" name="repass" placeholder="Nhập lại mật khẩu"/>
         </div>
 
         <div class="loginx">
-          <button class="loginx" type="submit">Get started</button>
-          <button class="loginx" type="button" (click)="goToHome()">Go Home</button>
+          <button class="loginx" type="submit">Đăng ký</button>
+          <button class="loginx" type="button" (click)="goToHome()">Về trang chủ</button>
         </div>
       </form>
-
     </div>
-
-
-
-
     <!-- tab-content -->
-
-
   </div>
   <!-- /form -->
   <div class="container-fluid">

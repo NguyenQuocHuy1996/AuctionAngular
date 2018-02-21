@@ -36,11 +36,18 @@ $(document).ready(function () {
     });
 });
 
+
 $('a[href=#top]').click(function () {
     $('body,html').animate({
         scrollTop: 0
     }, 600);
     return false;
+});
+$('a[href=#top]').click(function () {
+  $('body,html').animate({
+      scrollTop: 0
+  }, 600);
+  return false;
 });
 
 $(window).scroll(function () {
@@ -50,6 +57,8 @@ $(window).scroll(function () {
         $('.totop a').fadeOut();
     }
 });
+
+
 
 
 
@@ -115,6 +124,19 @@ $('.tab a').on('click', function (e) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 $('section.awSlider .carousel').carousel({
 	pause: "hover",
   interval: 20000
@@ -129,7 +151,13 @@ $('section.awSlider .carousel').on('slid.bs.carousel', function () {
 });
 
 
-// affix
+/* 
+Philips ambilight tv
+Üzerine gleince duruyor slide
+*/
+
+
+
 $('.menuan').affix({
   offset: {
     top: 190
@@ -137,7 +165,11 @@ $('.menuan').affix({
   }
 })
 
-// slider sản phẩm
+
+
+
+///Author: Lorenzo Macchiavelli
+///lmacchiavelli@gmail.com
 var sliderExpand = {
 	init:function(id,dividi,expand){
 		var cur = $(".slider_expand_id"+id);
@@ -294,3 +326,4 @@ $(window).resize(function(){
 			sliderExpand.resize(e,a[1]);
 	});
 });
+//SLIDER END

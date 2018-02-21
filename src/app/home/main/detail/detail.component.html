@@ -2,8 +2,8 @@
   <div class="col-md-9 col-xs-12 phai">
       <div class="row phai1">
           <img src="../../../../assets/img/hpny1-01.png" alt="">
-          <div class="col-md-12 phai3">
-                  <h3>NIKE JORDAN 1</h3>
+
+          <div class="col-md-12 phai3" *ngFor="let pro of product">
               <div class="col-md-6 col-xs-12 col-ms-12 danganh">
                   <div class="daugach2"></div>
                   <div class="col-md-12 col-xs-12 col-ms-12 danganh1">
@@ -44,24 +44,18 @@
                   </div>
               </div>
               <div class="col-md-6 dangtt">
-                  <h4>Thông tin sản phẩm</h4>
                   <ul>
-                      <span class="glyphicon glyphicon-tag"></span>
-                      AIR JORDAN 4 RETRO "2012 RELEASE"
+                      <h3>{{pro.proname}}</h3>
                   </ul>
                   <div class="daugach3"></div>
                   <h4>Thông tin sơ lượt</h4>
                   <ul>
                       <span class="glyphicon glyphicon-tags"></span>
-                      The Air Jordan 1 Retro High Flyknit Men's Shoe updates the iconic original with lightweight, flexible Flyknit.
+                      Thương hiệu: {{pro.brand}}
                   </ul>
                   <ul>
                       <span class="glyphicon glyphicon-tags"></span>
-                      Shown: Black/White/Game Royal
-                  </ul>
-                  <ul>
-                      <span class="glyphicon glyphicon-tags"></span>
-                      Style: 919704-006
+                      Bảo hành: {{pro.warrantyperiod}}
                   </ul>
                   <ul>
                       <input type="number" class="form__field" placeholder="" />
@@ -70,7 +64,8 @@
                       <button type="button" class="btn btn--primary btn--inside uppercase">Đấu giá</button>
                   </ul>
                   <div class="daugach3"></div>
-                  <h4>Thời gian</h4>
+                  <h4>Thời gian còn lại</h4>
+                  <p> 20:30:06 </p>
               </div>
               <div class="col-md-12 phai2">
                   <h4>Thông tin chi tiết</h4>
@@ -79,21 +74,7 @@
                   <h4>RETRO FEEL. MODERN APPEAL.</h4>
 
 
-                  <p> The Air Jordan 1 Retro High Flyknit Men's Shoe updates the iconic original with lightweight,
-                      flexible Flyknit.</p>
-
-
-                  <p> Benefits</p>
-
-                  <p>Lightweight Flyknit material is breathable and flexible Pigskin leather accents for a premium
-                      look Rubber cupsole construction provides sturdy support and traction Nike Air unit offers
-                      lightweight cushioning Shown: Black/White/Game Royal Style: 919704-006 Flyknit Origins
-                  </p>
-
-                  <p>
-                      Nike Flyknit technology was inspired by feedback from runners seeking a shoe with the snug (and virtually unnoticed) fit
-                      of a sock.
-                  </p>
+                  <p>{{pro.note}}</p>
               </div>
           </div>
 

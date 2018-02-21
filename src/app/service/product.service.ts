@@ -16,10 +16,31 @@ export class ProductService {
           .map((response: Response) => response.json() )
     }
 
+    //Get product by id Category
     getProductbyID(id: number){
       return this._http.get(this.apiURL)
-        .map( res =>{
+        .map( res => {
           return res.json().filter((product) => product.cateID === id);
       })
     }
+
+    //Get product by id of product
+    getOneProduct(id: number){
+      return this._http.get(this.apiURL)
+        .map( res => {
+          return res.json().filter((product) => product.id === id);
+      })
+    }
+
+    getProductbyUser(userEmail: any){
+      return this._http.get(this.apiURL)
+        .map( res => {
+          return res.json().filter((product) => product.username === userEmail);
+      })
+    }
+
+    //Add one product
+    Add(data): Observable<any> {
+      return this._http.post(this.apiURL, data).map((response: Response) => response.json())
+  }
 }

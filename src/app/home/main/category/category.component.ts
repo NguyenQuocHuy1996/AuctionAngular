@@ -15,7 +15,6 @@ export class CategoryComponent implements OnInit, OnDestroy {
   public id: number;
   public subscription: Subscription;
   constructor(private router: Router, private activatedRoute: ActivatedRoute ,private productService: ProductService) {
-
   }
 
   ngOnInit(){
@@ -24,12 +23,12 @@ export class CategoryComponent implements OnInit, OnDestroy {
     });
 
     this.productService.getProductbyID(this.id).subscribe((data) => {
+      //this.router.navigate(['/danh-muc', this.id]);
       this.products = data;
-      this.router.navigate(['/danh-muc', this.id]);
     });
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 }

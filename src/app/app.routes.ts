@@ -11,6 +11,7 @@ import { MainHomeComponent } from './home/main/main-home/main-home.component';
 import { DangSPComponent } from './home/main/dang-sp/dang-sp.component';
 import { CategoryComponent } from './home/main/category/category.component';
 import { SanPhamDaDangComponent } from './home/main/sp-da-dang/sp-da-dang.component';
+import { SanPhamDaDauGiaComponent } from './home/main/sp-da-dau-gia/sp-da-dau-gia.component';
 import { DetailComponent } from './home/main/detail/detail.component';
 
 import { CheckLoginGuard } from './guards/checkLogin.guard';
@@ -29,7 +30,10 @@ const routing: Routes = [
           { path: 'danh-muc/:id', component: CategoryComponent }
         ]
       },
-      { path: 'dang-san-pham', component: DangSPComponent, canActivate: [CheckLoginGuard] },
+      // { path: 'dang-san-pham', component: DangSPComponent, canActivate: [CheckLoginGuard] },
+      { path: 'dang-san-pham', component: DangSPComponent},
+      //{ path: 'san-pham-da-dau-gia', component: SanPhamDaDauGiaComponent, canActivate: [CheckLoginGuard] },
+      { path: 'san-pham-da-dau-gia', component: SanPhamDaDauGiaComponent},
       { path: 'san-pham-da-dang', component: SanPhamDaDangComponent, canActivate: [CheckLoginGuard] },
       { path: 'demo-upload-image', component: FormdataUploadComponent },
     ]

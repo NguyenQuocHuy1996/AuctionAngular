@@ -1,6 +1,9 @@
 /* slider */
+
+
+/*hetslider */
 .carousel-inner{
-	margin: 10px 0;	
+	margin: 10px 0;
 }
 .carousel-caption .slider_left ul li{
 	margin-bottom: -15px;
@@ -21,5 +24,3 @@ text-align: center;
 	line-height: 25px;
 }
 
-
-/* hetslider */

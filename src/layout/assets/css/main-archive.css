@@ -28,6 +28,11 @@
  .trai ul{
 	 margin: 0 20px;
  }
+ .trai h3 {
+    background: rgb(51, 51, 51);
+    padding: 3%;
+    color: white;
+}
  .trai ul li ul li{
 	margin: 0 20px;
 	list-style: circle;
@@ -48,11 +53,6 @@
 	 list-style: none;
 	 list-style-image: url('../img/listyle.png');
  }
- .trai h3 {
-    background: rgb(51, 51, 51);
-    padding: 3%;
-    color: white;
-}
  /*------bangbenphai----*/
  .sanpham .xemthem{
 	 float:right;

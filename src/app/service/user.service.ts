@@ -15,7 +15,9 @@ export class UserService {
     }
 
     getOneUser(userName: any){
-    return this._http.get(this.apiURL)
-      .map((res: Response) =>  res.json().filter((user) => user.name === userName));
+      return this._http.get(this.apiURL)
+        .map(res => {
+          return res.json().filter((user) => user.email === userName);
+      })
     }
 }

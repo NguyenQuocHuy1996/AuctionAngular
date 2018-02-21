@@ -22,6 +22,7 @@ import { DangSPComponent } from './home/main/dang-sp/dang-sp.component';
 import { CategoryComponent } from './home/main/category/category.component';
 import { DetailComponent } from './home/main/detail/detail.component';
 import { SanPhamDaDangComponent } from './home/main/sp-da-dang/sp-da-dang.component';
+import { SanPhamDaDauGiaComponent } from './home/main/sp-da-dau-gia/sp-da-dau-gia.component';
 
 import { SideBarHomeComponent } from './home/main/sidebar/sidebarHome.component';
 
@@ -33,17 +34,21 @@ import { UserService } from './service/user.service';
 
 import { CheckLoginGuard } from './guards/checkLogin.guard';
 
+//Form Data Upload
 import { FormdataUploadComponent } from './home/main/uploadDemo/uploadDemo.component';
 
 //Pipe Sort
 import { Ng2OrderModule } from 'ng2-order-pipe';
+
+//Upload File
+import { FileUpload } from './service/fileupload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent, LoginComponent, RegisterComponent, Page404Component,
     HeaderComponent, SliderComponent, MainComponent, FooterComponent,
-    MainHomeComponent, DangSPComponent, CategoryComponent, SanPhamDaDangComponent, DetailComponent,
+    MainHomeComponent, DangSPComponent, CategoryComponent, SanPhamDaDangComponent, SanPhamDaDauGiaComponent, DetailComponent,
     SideBarHomeComponent,
 
     FormdataUploadComponent
@@ -54,11 +59,14 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     HttpModule,
     AppRoutes,
     ReactiveFormsModule,
+
     Ng2OrderModule
   ],
   providers: [LoginService, RegisterService, UserService,
               ProductService, CategoryService,
-              CheckLoginGuard],
+              CheckLoginGuard,
+
+              FileUpload],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
