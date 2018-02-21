@@ -9,6 +9,7 @@ import { LoginService } from './../../service/login.service';
 export class HeaderComponent implements OnInit {
   public check: boolean;
   public user: any;
+
   constructor(private loginService: LoginService){
 
   }

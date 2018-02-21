@@ -34,8 +34,6 @@ import { UserService } from './service/user.service';
 
 //Guard for Login
 import { CheckLoginGuard } from './guards/checkLogin.guard';
-//CountDown Time
-import {CountDown} from "../../node_modules/angular2-simple-countdown/countdown";
 
 //Pipe Sort
 import { Ng2OrderModule } from 'ng2-order-pipe';
@@ -45,9 +43,7 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     HomeComponent, LoginComponent, RegisterComponent, Page404Component,
     HeaderComponent, SliderComponent, MainComponent, FooterComponent,
     MainHomeComponent, DangSPComponent, CategoryComponent, SanPhamDaDangComponent, SanPhamDaDauGiaComponent, DetailComponent,
-    SideBarHomeComponent,
-
-    CountDown
+    SideBarHomeComponent
   ],
   imports: [
     BrowserModule,

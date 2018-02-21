@@ -20,7 +20,13 @@ export class DangSPComponent implements OnInit {
   note: string;
   cateID: number;
   date = new Date();
+  expiredDate: Date;
+  day: number;
+  month: number;
+  year: number;
+
   constructor(private productService: ProductService, private loginService: LoginService, private categoryService: CategoryService) {
+
   }
 
   ngOnInit(){
@@ -31,15 +37,14 @@ export class DangSPComponent implements OnInit {
     this.categoryService.getList().subscribe((response: any) => {
       this.categorys = response;
     }, error => alert('Error: ' + error));
+    this.day = this.date.getDate();
+    this.month = this.date.getMonth();
+    this.year = this.date.getFullYear();
 
-    console.log('Năm: ' + this.date.getFullYear());
-    console.log('Tháng: ' + this.date.getMonth());
-    console.log('Ngày: ' + this.date.getDay() + 1);
-
-    console.log('Giờ: ' + this.date.getHours());
-    console.log('Phút: ' + this.date.getMinutes());
-    console.log('Giây: ' + this.date.getSeconds());
+    this.productService.countdown(2018, 1, 22);
   }
+
+
 
   onProNameType(value: any){
     this.proname = value;
@@ -59,6 +64,9 @@ export class DangSPComponent implements OnInit {
   }
 
   onSubmit(){
+    //Thuật toán ngày hết hạn đấu giá
+    this.expiredDate = new Date(this.year, this.month, this.day);
+
     const product = {
       cateID: this.cateID,
       proname: this.proname,
@@ -70,7 +78,10 @@ export class DangSPComponent implements OnInit {
       smallimage2: 'smallimage2 2',
       smallimage3: 'smallimage3 2',
       note: this.note,
-      username: this.loginService.UserName()
+      username: this.loginService.UserName(),
+      yearpost: this.expiredDate.getDate(),
+      monthpost: this.expiredDate.getMonth(),
+      daypost: this.expiredDate.getFullYear()
     }
     this.productService.Add(product).subscribe(respone => {
         console.log(respone);
